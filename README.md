@@ -40,14 +40,22 @@ WantedBy=multi-user.target
 
 6.) chmod +x /etc/workflow.sh
 
+7.) edit workflow.sh
+- change recipient's mail address
+- change vendor and product id of your usb device (call lsusb)
+- edit function "whisper" which calls the whisper api
+
+8.) 
+
 systemctl daemon-reload
 systemctl enable workflow.service
 systemctl start workflow.service
+
 
 API
 
 I would recommend to use the script with two local APIs which are available on github
 
-https://github.com/morioka/tiny-openai-whisper-api
-
+https://github.com/morioka/tiny-openai-whisper-api and 
+https://github.com/pluja/whishper
 
