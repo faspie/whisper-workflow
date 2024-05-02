@@ -186,7 +186,7 @@ send_mail()
 
 
 [ -f "$1" ] && echo "send_mail: Sending mail, recipient $RECIPIENT, content: $1"
-cat $1 | fold -s -w 100 | mail.mailutils -M -aFrom:whisper@spielmann-thurnau.de -s "Whisper: Aktuelle Aufzeichnung `rev <<< "$(basename $1)" | cut -d"." -f2- | rev`" -A $1 "$RECIPIENT" && echo "send_mail: success" || echo "send_mail: error"
+cat $1 | fold -s -w 100 | mail.mailutils -M -aFrom:whisper@example.com -s "Whisper: Aktuelle Aufzeichnung `rev <<< "$(basename $1)" | cut -d"." -f2- | rev`" -A $1 "$RECIPIENT" && echo "send_mail: success" || echo "send_mail: error"
 
 }
 
