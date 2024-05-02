@@ -49,11 +49,7 @@ WantedBy=multi-user.target
 - change vendor and product id of your usb device (call lsusb)
 - edit function "whisper" which calls the whisper api
 
-8.) 
-
-systemctl daemon-reload
-systemctl enable workflow.service
-systemctl start workflow.service
+8.) systemctl daemon-reload && systemctl enable workflow.service && systemctl start workflow.service
 
 
 API
