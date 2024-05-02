@@ -2,9 +2,12 @@ Purpose of this project is a small workflow script for an automated transcriptio
 
 The script consists of a few parts
 
-1.) Check if the voice recorder is avaible
+1.) Check if the voice recorder is available
+
 2.) Copy / convert files (supported formats: MP3, DSS, DSS2 is unfortunately not supported by ffmpeg)
+
 3.) Call API
+
 4.) Send an email with the transcript
 
 The script is designed for use on a raspberry pi but can also be used in many different other scenarios.
@@ -14,6 +17,7 @@ GETTING STARTED
 Prerequisites on debian based systems
 
 1.) apt-get install ffmpeg mailutils jq
+
 2.) Configure mail system for sending mails: dpkg-reconfigure exim4-config
 
 3.) Move script to a directory of your choice (e. g. /etc)
@@ -54,7 +58,7 @@ systemctl start workflow.service
 
 API
 
-I would recommend to use the script with two local APIs which are available on github
+I recommend to use the script with two local APIs which are available on github
 
 https://github.com/morioka/tiny-openai-whisper-api and 
 https://github.com/pluja/whishper
